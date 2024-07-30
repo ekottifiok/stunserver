@@ -6,7 +6,7 @@ DEFINES := -DNDEBUG
 # CLANG compiler works fine
 # CXX := /usr/bin/clang++
 
-STANDARD_FLAGS := -Wall -Wuninitialized 
+STANDARD_FLAGS := -Wall -Wuninitialized
 
 RELEASE_FLAGS := -O3
 DEBUG_FLAGS := -g
@@ -16,6 +16,9 @@ CRYPTO_LIBS := -lcrypto
 PGO1_FLAGS := -fprofile-generate -fprofile-dir=/home/jselbie/profile
 PGO2_FLAGS := -fprofile-use -fprofile-dir=/home/jselbie/profile
 
+ifeq ($(SHARED),1)
+  STANDARD_FLAGS += -fPIC
+endif
 
 #SOLARIS HACK
 UNAME := $(shell uname -s)

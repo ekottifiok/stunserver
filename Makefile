@@ -10,6 +10,9 @@ everything:
 	$(MAKE) $(T) --directory=client
 	$(MAKE) $(T) --directory=server
 
+shared: everything
+	$(MAKE) $@ $(T) --directory=server
+
 copybin: everything
 	rm -f ./stunserver ./stunclient ./stuntestcode
 	cp server/stunserver .

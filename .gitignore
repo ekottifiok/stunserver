@@ -3,6 +3,7 @@ nbproject/
 *.o
 *.gch
 *.a
+*.so
 callgrind.out.*
 
 stunclient
@@ -13,3 +14,4 @@ stunclient.exe
 stunserver.exe
 stuntestcode.exe
 
+.vscode/

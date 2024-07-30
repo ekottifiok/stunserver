@@ -1,0 +1,287 @@
+LIBRARY   calculator
+EXPORTS
+000000000000efa0 T DumpConfig(CStunServerConfig&)
+000000000000eba0 T PrintUsage(bool)
+000000000000fef0 T BlockSignal(int)
+000000000000ecf0 T DumpStartupArgs(StartupArgs&)
+000000000000ec10 T strerror_helper(char*, char*, int)
+000000000000ebe0 T strerror_helper(int, char*, int)
+000000000000f190 T ResolveAdapterName(bool, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned short, CSocketAddress*)
+0000000000011540 T LoadConfigsFromFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<StartupArgs, std::allocator<StartupArgs> >&)
+000000000000fc20 T ParseCommandLineArgs(int, char**, int, StartupArgs*)
+000000000000ff80 T WaitForAppExitSignal()
+000000000000f3a0 T BuildServerConfigurationFromArgs(StartupArgs&, CStunServerConfig*)
+000000000000ec20 T LogHR(unsigned short, int)
+0000000000010180 T StartTCP(CRefCountedPtr<CTCPServer>&, CStunServerConfig&)
+0000000000010020 T StartUDP(CRefCountedPtr<CStunServer>&, CStunServerConfig&)
+000000000002e778 u guard variable for boost::none
+0000000000023dc0 T CTCPServer::Initialize(CStunServerConfig const&)
+0000000000023bf0 T CTCPServer::Stop()
+0000000000023bb0 T CTCPServer::Start()
+0000000000024290 W CTCPServer::AddRef()
+0000000000023a80 T CTCPServer::InitTSA(TransportAddressSet*, SocketRole, bool, CSocketAddress const&, CSocketAddress const&)
+0000000000013570 W CTCPServer::Release()
+0000000000023b30 T CTCPServer::Shutdown()
+0000000000023a30 T CTCPServer::CTCPServer()
+0000000000023a30 T CTCPServer::CTCPServer()
+0000000000023c50 T CTCPServer::~CTCPServer()
+0000000000023c00 T CTCPServer::~CTCPServer()
+0000000000023c00 T CTCPServer::~CTCPServer()
+000000000001f200 T CStunServer::Initialize(CStunServerConfig const&)
+000000000001ef20 T CStunServer::Stop()
+000000000001efe0 T CStunServer::Start()
+000000000001f720 W CStunServer::AddRef()
+0000000000013550 W CStunServer::Release()
+000000000001f070 T CStunServer::Shutdown()
+000000000001ee60 T CStunServer::AddSocket(TransportAddressSet*, SocketRole, CSocketAddress const&, CSocketAddress const&, bool)
+000000000001ede0 T CStunServer::CStunServer()
+000000000001ede0 T CStunServer::CStunServer()
+000000000001f1e0 T CStunServer::~CStunServer()
+000000000001f160 T CStunServer::~CStunServer()
+000000000001f160 T CStunServer::~CStunServer()
+0000000000014a40 W StartupArgs::StartupArgs(StartupArgs const&)
+0000000000014a40 W StartupArgs::StartupArgs(StartupArgs const&)
+0000000000014ed0 W StartupArgs::~StartupArgs()
+0000000000014ed0 W StartupArgs::~StartupArgs()
+00000000000150d0 W CCmdLineParser::~CCmdLineParser()
+00000000000150d0 W CCmdLineParser::~CCmdLineParser()
+00000000000218c0 T CTCPStunThread::ClosePipes()
+0000000000021880 T CTCPStunThread::CreatePipes()
+0000000000023830 T CTCPStunThread::ThreadCleanup()
+0000000000023a20 T CTCPStunThread::ThreadFunction(void*)
+0000000000022b30 T CTCPStunThread::CloseConnection(StunConnection*)
+0000000000021f70 T CTCPStunThread::GetListenSocket(int)
+0000000000022e10 T CTCPStunThread::AcceptConnection(CStunSocket*)
+0000000000022a70 T CTCPStunThread::GetTimeoutSeconds()
+0000000000021c10 T CTCPStunThread::CloseListenSockets()
+0000000000023670 T CTCPStunThread::CloseAllConnections(FastHashDynamic<int, StunConnection*>*)
+00000000000219c0 T CTCPStunThread::CreateListenSockets()
+00000000000218f0 T CTCPStunThread::NotifyThreadViaPipe()
+00000000000237b0 T CTCPStunThread::SweepDeadConnections()
+0000000000022a90 T CTCPStunThread::IsConnectionCountAtMax()
+0000000000023580 T CTCPStunThread::ProcessConnectionEvent(int, unsigned int)
+0000000000021920 T CTCPStunThread::SetListenSocketsOnEpoll(bool)
+0000000000023070 T CTCPStunThread::WriteBytesForConnection(StunConnection*)
+00000000000231d0 T CTCPStunThread::ReceiveBytesForConnection(StunConnection*)
+0000000000023850 T CTCPStunThread::Run()
+0000000000021fe0 T CTCPStunThread::Init(TransportAddressSet const&, TransportAddressSet const&, IStunAuth*, int, boost::shared_ptr<RateLimiter>&)
+0000000000022870 T CTCPStunThread::Stop()
+0000000000021c80 T CTCPStunThread::Reset()
+0000000000022800 T CTCPStunThread::Start()
+0000000000022ac0 T CTCPStunThread::RateCheck(CSocketAddress const&)
+0000000000023c70 T CTCPStunThread::CTCPStunThread()
+0000000000023c70 T CTCPStunThread::CTCPStunThread()
+00000000000228e0 T CTCPStunThread::~CTCPStunThread()
+00000000000228e0 T CTCPStunThread::~CTCPStunThread()
+0000000000020010 T CConnectionPool::GetConnection(int, SocketRole)
+000000000001fb50 T CConnectionPool::ResetConnection(StunConnection*)
+000000000001fb40 T CConnectionPool::ReleaseConnection(StunConnection*)
+000000000001fba0 T CConnectionPool::Grow()
+000000000001f930 T CConnectionPool::Reset()
+000000000001f920 T CConnectionPool::CConnectionPool()
+000000000001f920 T CConnectionPool::CConnectionPool()
+000000000001fb30 T CConnectionPool::~CConnectionPool()
+000000000001fb30 T CConnectionPool::~CConnectionPool()
+00000000000242b0 W FastHashDynamic<int, StunConnection*>::ResetTable()
+000000000001ed80 T CStunServerConfig::CStunServerConfig()
+000000000001ed80 T CStunServerConfig::CStunServerConfig()
+0000000000020590 T CStunSocketThread::SignalForStop(bool)
+0000000000021020 T CStunSocketThread::ThreadFunction(void*)
+00000000000201a0 T CStunSocketThread::ClearSocketArray()
+0000000000021030 T CStunSocketThread::InitThreadBuffers()
+0000000000020ae0 T CStunSocketThread::WaitForSocketData()
+00000000000202b0 T CStunSocketThread::UninitThreadBuffers()
+00000000000206e0 T CStunSocketThread::WaitForStopAndClose()
+0000000000020c20 T CStunSocketThread::ProcessRequestAndSendResponse()
+0000000000020d60 T CStunSocketThread::Run()
+0000000000021430 T CStunSocketThread::Init(CStunSocket*, TransportAddressSet*, IStunAuth*, SocketRole, boost::shared_ptr<RateLimiter>&)
+0000000000020540 T CStunSocketThread::Start()
+00000000000201c0 T CStunSocketThread::CStunSocketThread()
+00000000000201c0 T CStunSocketThread::CStunSocketThread()
+0000000000020730 T CStunSocketThread::~CStunSocketThread()
+0000000000020730 T CStunSocketThread::~CStunSocketThread()
+000000000001eb20 W boost::wrapexcept<boost::property_tree::json_parser::json_parser_error>::wrapexcept(boost::wrapexcept<boost::property_tree::json_parser::json_parser_error> const&)
+000000000001eb20 W boost::wrapexcept<boost::property_tree::json_parser::json_parser_error>::wrapexcept(boost::wrapexcept<boost::property_tree::json_parser::json_parser_error> const&)
+0000000000014470 W boost::wrapexcept<boost::property_tree::json_parser::json_parser_error>::~wrapexcept()
+00000000000143c0 W boost::wrapexcept<boost::property_tree::json_parser::json_parser_error>::~wrapexcept()
+00000000000143c0 W boost::wrapexcept<boost::property_tree::json_parser::json_parser_error>::~wrapexcept()
+000000000001e990 W boost::wrapexcept<boost::property_tree::ptree_bad_path>::wrapexcept(boost::wrapexcept<boost::property_tree::ptree_bad_path> const&)
+000000000001e990 W boost::wrapexcept<boost::property_tree::ptree_bad_path>::wrapexcept(boost::wrapexcept<boost::property_tree::ptree_bad_path> const&)
+0000000000013c80 W boost::wrapexcept<boost::property_tree::ptree_bad_path>::~wrapexcept()
+0000000000013bf0 W boost::wrapexcept<boost::property_tree::ptree_bad_path>::~wrapexcept()
+0000000000013bf0 W boost::wrapexcept<boost::property_tree::ptree_bad_path>::~wrapexcept()
+0000000000017e70 W boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::get_child(boost::property_tree::string_path<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, boost::property_tree::id_translator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&)
+0000000000015a40 W boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::basic_ptree(boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&)
+0000000000015a40 W boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::basic_ptree(boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&)
+0000000000015970 W boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::~basic_ptree()
+0000000000015970 W boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::~basic_ptree()
+0000000000013f30 W boost::property_tree::json_parser::json_parser_error::~json_parser_error()
+0000000000013e60 W boost::property_tree::json_parser::json_parser_error::~json_parser_error()
+0000000000013e60 W boost::property_tree::json_parser::json_parser_error::~json_parser_error()
+0000000000013a50 W boost::property_tree::json_parser::detail::standard_callbacks<boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::on_code_unit(char)
+00000000000191f0 W boost::property_tree::json_parser::detail::standard_callbacks<boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::new_tree()
+000000000001bdf0 W boost::property_tree::json_parser::detail::parser<boost::property_tree::json_parser::detail::standard_callbacks<boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, boost::property_tree::json_parser::detail::encoding<char>, std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> > >::parse_array()
+0000000000018580 W boost::property_tree::json_parser::detail::parser<boost::property_tree::json_parser::detail::standard_callbacks<boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, boost::property_tree::json_parser::detail::encoding<char>, std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> > >::parse_error(char const*)
+000000000001d910 W boost::property_tree::json_parser::detail::parser<boost::property_tree::json_parser::detail::standard_callbacks<boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, boost::property_tree::json_parser::detail::encoding<char>, std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> > >::parse_value()
+000000000001c9e0 W boost::property_tree::json_parser::detail::parser<boost::property_tree::json_parser::detail::standard_callbacks<boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, boost::property_tree::json_parser::detail::encoding<char>, std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> > >::parse_object()
+000000000001a300 W boost::property_tree::json_parser::detail::parser<boost::property_tree::json_parser::detail::standard_callbacks<boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, boost::property_tree::json_parser::detail::encoding<char>, std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> > >::parse_string()
+000000000001b070 W boost::property_tree::json_parser::detail::parser<boost::property_tree::json_parser::detail::standard_callbacks<boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, boost::property_tree::json_parser::detail::encoding<char>, std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> > >::parse_boolean()
+0000000000018660 W boost::property_tree::json_parser::detail::parser<boost::property_tree::json_parser::detail::standard_callbacks<boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, boost::property_tree::json_parser::detail::encoding<char>, std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> > >::parse_codepoint_ref()
+0000000000018420 W boost::property_tree::json_parser::detail::source<boost::property_tree::json_parser::detail::encoding<char>, std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> > >::parse_error(char const*)
+000000000001ba20 W bool boost::property_tree::json_parser::detail::source<boost::property_tree::json_parser::detail::encoding<char>, std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> > >::have<boost::property_tree::json_parser::detail::number_callback_adapter<boost::property_tree::json_parser::detail::standard_callbacks<boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, boost::property_tree::json_parser::detail::encoding<char>, std::istreambuf_iterator<char, std::char_traits<char> >, std::input_iterator_tag> >(bool (boost::property_tree::json_parser::detail::encoding<char>::*)(char) const, boost::property_tree::json_parser::detail::number_callback_adapter<boost::property_tree::json_parser::detail::standard_callbacks<boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, boost::property_tree::json_parser::detail::encoding<char>, std::istreambuf_iterator<char, std::char_traits<char> >, std::input_iterator_tag>&)
+000000000001da70 W void boost::property_tree::json_parser::read_json<boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, std::locale const&)
+0000000000013440 W boost::property_tree::ptree_error::~ptree_error()
+0000000000013420 W boost::property_tree::ptree_error::~ptree_error()
+0000000000013420 W boost::property_tree::ptree_error::~ptree_error()
+0000000000017920 W boost::property_tree::string_path<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, boost::property_tree::id_translator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::reduce()
+00000000000139b0 W boost::property_tree::ptree_bad_data::~ptree_bad_data()
+00000000000134b0 W boost::property_tree::ptree_bad_data::~ptree_bad_data()
+00000000000134b0 W boost::property_tree::ptree_bad_data::~ptree_bad_data()
+0000000000017d80 W boost::property_tree::ptree_bad_path::ptree_bad_path(boost::property_tree::ptree_bad_path const&)
+0000000000017d80 W boost::property_tree::ptree_bad_path::ptree_bad_path(boost::property_tree::ptree_bad_path const&)
+0000000000013a00 W boost::property_tree::ptree_bad_path::~ptree_bad_path()
+0000000000013470 W boost::property_tree::ptree_bad_path::~ptree_bad_path()
+0000000000013470 W boost::property_tree::ptree_bad_path::~ptree_bad_path()
+0000000000015220 W boost::property_tree::file_parser_error::format_what(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long)
+0000000000015770 W boost::property_tree::file_parser_error::file_parser_error(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long)
+0000000000017790 W boost::property_tree::file_parser_error::file_parser_error(boost::property_tree::file_parser_error const&)
+0000000000015770 W boost::property_tree::file_parser_error::file_parser_error(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long)
+0000000000017790 W boost::property_tree::file_parser_error::file_parser_error(boost::property_tree::file_parser_error const&)
+0000000000013ec0 W boost::property_tree::file_parser_error::~file_parser_error()
+00000000000134f0 W boost::property_tree::file_parser_error::~file_parser_error()
+00000000000134f0 W boost::property_tree::file_parser_error::~file_parser_error()
+0000000000020170 W void boost::checked_delete<CBuffer>(CBuffer*)
+000000000000e2da W void boost::throw_exception<boost::property_tree::json_parser::json_parser_error>(boost::property_tree::json_parser::json_parser_error const&, boost::source_location const&)
+00000000000133e0 W boost::any::holder<boost::property_tree::string_path<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, boost::property_tree::id_translator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::~holder()
+00000000000133a0 W boost::any::holder<boost::property_tree::string_path<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, boost::property_tree::id_translator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::~holder()
+00000000000133a0 W boost::any::holder<boost::property_tree::string_path<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, boost::property_tree::id_translator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::~holder()
+000000000001f6a0 W boost::detail::sp_counted_base::destroy()
+000000000001f740 W boost::detail::sp_counted_base::release()
+000000000001f6e0 W boost::detail::sp_counted_impl_p<RateLimiter>::get_deleter(std::type_info const&)
+000000000001f6f0 W boost::detail::sp_counted_impl_p<RateLimiter>::get_local_deleter(std::type_info const&)
+000000000001f700 W boost::detail::sp_counted_impl_p<RateLimiter>::get_untyped_deleter()
+000000000001f6c0 W boost::detail::sp_counted_impl_p<RateLimiter>::dispose()
+000000000001f710 W boost::detail::sp_counted_impl_p<RateLimiter>::~sp_counted_impl_p()
+000000000001f6b0 W boost::detail::sp_counted_impl_p<RateLimiter>::~sp_counted_impl_p()
+000000000001f6b0 W boost::detail::sp_counted_impl_p<RateLimiter>::~sp_counted_impl_p()
+00000000000200f0 W boost::detail::sp_counted_impl_p<CBuffer>::get_deleter(std::type_info const&)
+0000000000020100 W boost::detail::sp_counted_impl_p<CBuffer>::get_local_deleter(std::type_info const&)
+0000000000020110 W boost::detail::sp_counted_impl_p<CBuffer>::get_untyped_deleter()
+0000000000020130 W boost::detail::sp_counted_impl_p<CBuffer>::dispose()
+0000000000020120 W boost::detail::sp_counted_impl_p<CBuffer>::~sp_counted_impl_p()
+00000000000200e0 W boost::detail::sp_counted_impl_p<CBuffer>::~sp_counted_impl_p()
+00000000000200e0 W boost::detail::sp_counted_impl_p<CBuffer>::~sp_counted_impl_p()
+00000000000146b0 W boost::wrapexcept<boost::property_tree::json_parser::json_parser_error>::clone() const
+000000000000e3d4 W boost::wrapexcept<boost::property_tree::json_parser::json_parser_error>::rethrow() const
+0000000000013fa0 W boost::wrapexcept<boost::property_tree::ptree_bad_path>::clone() const
+000000000000e38c W boost::wrapexcept<boost::property_tree::ptree_bad_path>::rethrow() const
+0000000000017bb0 W boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::walk_path(boost::property_tree::string_path<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, boost::property_tree::id_translator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) const
+0000000000013270 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_backslash(char) const
+0000000000013200 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_plusminus(char) const
+00000000000132d0 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_open_brace(char) const
+00000000000132e0 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_close_brace(char) const
+00000000000132a0 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_open_bracket(char) const
+00000000000132b0 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_close_bracket(char) const
+0000000000013230 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_0(char) const
+00000000000132f0 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_a(char) const
+0000000000013300 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_b(char) const
+0000000000013310 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_e(char) const
+0000000000013320 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_f(char) const
+0000000000013330 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_l(char) const
+0000000000013340 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_n(char) const
+0000000000013350 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_r(char) const
+0000000000013360 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_s(char) const
+0000000000013370 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_t(char) const
+0000000000013380 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_u(char) const
+0000000000013220 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_eE(char) const
+00000000000131c0 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_ws(char) const
+0000000000013210 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_dot(char) const
+00000000000132c0 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_colon(char) const
+0000000000013290 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_comma(char) const
+0000000000013240 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_digit(char) const
+00000000000131f0 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_minus(char) const
+0000000000013260 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_quote(char) const
+0000000000013280 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_slash(char) const
+0000000000013250 W boost::property_tree::json_parser::detail::external_ascii_superset_encoding::is_digit0(char) const
+0000000000013390 W boost::any::holder<boost::property_tree::string_path<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, boost::property_tree::id_translator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::type() const
+0000000000014950 W boost::any::holder<boost::property_tree::string_path<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, boost::property_tree::id_translator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::clone() const
+0000000000018fa0 W std::istreambuf_iterator<char, std::char_traits<char> >::equal(std::istreambuf_iterator<char, std::char_traits<char> > const&) const
+0000000000018610 W std::istreambuf_iterator<char, std::char_traits<char> >::_M_get() const
+0000000000018590 W std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::~pair()
+0000000000018590 W std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::~pair()
+00000000000185d0 W std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::~pair()
+00000000000185d0 W std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::~pair()
+00000000000163b0 W void std::vector<StartupArgs, std::allocator<StartupArgs> >::_M_realloc_insert<StartupArgs const&>(__gnu_cxx::__normal_iterator<StartupArgs*, std::vector<StartupArgs, std::allocator<StartupArgs> > >, StartupArgs const&)
+0000000000019080 W void std::vector<boost::property_tree::json_parser::detail::standard_callbacks<boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::layer, std::allocator<boost::property_tree::json_parser::detail::standard_callbacks<boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::layer> >::_M_realloc_insert<boost::property_tree::json_parser::detail::standard_callbacks<boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::layer const&>(__gnu_cxx::__normal_iterator<boost::property_tree::json_parser::detail::standard_callbacks<boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::layer*, std::vector<boost::property_tree::json_parser::detail::standard_callbacks<boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::layer, std::allocator<boost::property_tree::json_parser::detail::standard_callbacks<boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::layer> > >, boost::property_tree::json_parser::detail::standard_callbacks<boost::property_tree::basic_ptree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::layer const&)
+0000000000021710 W void std::vector<CStunSocket*, std::allocator<CStunSocket*> >::_M_realloc_insert<CStunSocket*>(__gnu_cxx::__normal_iterator<CStunSocket**, std::vector<CStunSocket*, std::allocator<CStunSocket*> > >, CStunSocket*&&)
+000000000001f7b0 W void std::vector<CStunSocketThread*, std::allocator<CStunSocketThread*> >::_M_realloc_insert<CStunSocketThread* const&>(__gnu_cxx::__normal_iterator<CStunSocketThread**, std::vector<CStunSocketThread*, std::allocator<CStunSocketThread*> > >, CStunSocketThread* const&)
+00000000000151c0 W std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::~basic_stringbuf()
+0000000000015170 W std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::~basic_stringbuf()
+0000000000015170 W std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::~basic_stringbuf()
+000000000002db50 V typeinfo for CTCPServer
+000000000002d9e0 V typeinfo for CStunServer
+000000000002d9d0 V typeinfo for IRefCounted
+000000000002db40 V typeinfo for CObjectFactory<CTCPServer>
+000000000002d9b0 V typeinfo for CObjectFactory<CStunServer>
+000000000002d6d0 V typeinfo for boost::wrapexcept<boost::property_tree::json_parser::json_parser_error>
+000000000002d718 V typeinfo for boost::wrapexcept<boost::property_tree::ptree_bad_path>
+000000000002d6b8 V typeinfo for boost::property_tree::json_parser::json_parser_error
+000000000002d658 V typeinfo for boost::property_tree::ptree_error
+000000000002d618 V typeinfo for boost::property_tree::string_path<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, boost::property_tree::id_translator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >
+000000000002d670 V typeinfo for boost::property_tree::ptree_bad_data
+000000000002d688 V typeinfo for boost::property_tree::ptree_bad_path
+000000000002d6a0 V typeinfo for boost::property_tree::file_parser_error
+000000000002d638 V typeinfo for boost::exception_detail::clone_base
+000000000002d648 V typeinfo for boost::any::placeholder
+000000000002d760 V typeinfo for boost::any::holder<boost::property_tree::string_path<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, boost::property_tree::id_translator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >
+000000000002d9c0 V typeinfo for boost::detail::sp_counted_base
+000000000002da28 V typeinfo for boost::detail::sp_counted_impl_p<RateLimiter>
+000000000002dae0 V typeinfo for boost::detail::sp_counted_impl_p<CBuffer>
+000000000002d628 V typeinfo for boost::exception
+0000000000028b20 V typeinfo name for CTCPServer
+0000000000028738 V typeinfo name for CStunServer
+0000000000028728 V typeinfo name for IRefCounted
+0000000000028b00 V typeinfo name for CObjectFactory<CTCPServer>
+00000000000286e0 V typeinfo name for CObjectFactory<CStunServer>
+00000000000262c0 V typeinfo name for boost::wrapexcept<boost::property_tree::json_parser::json_parser_error>
+0000000000026320 V typeinfo name for boost::wrapexcept<boost::property_tree::ptree_bad_path>
+0000000000026280 V typeinfo name for boost::property_tree::json_parser::json_parser_error
+0000000000026180 V typeinfo name for boost::property_tree::ptree_error
+0000000000026080 V typeinfo name for boost::property_tree::string_path<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, boost::property_tree::id_translator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >
+00000000000261c0 V typeinfo name for boost::property_tree::ptree_bad_data
+0000000000026200 V typeinfo name for boost::property_tree::ptree_bad_path
+0000000000026240 V typeinfo name for boost::property_tree::file_parser_error
+0000000000026120 V typeinfo name for boost::exception_detail::clone_base
+0000000000026150 V typeinfo name for boost::any::placeholder
+0000000000026360 V typeinfo name for boost::any::holder<boost::property_tree::string_path<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, boost::property_tree::id_translator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >
+0000000000028700 V typeinfo name for boost::detail::sp_counted_base
+0000000000028760 V typeinfo name for boost::detail::sp_counted_impl_p<RateLimiter>
+00000000000287a0 V typeinfo name for boost::detail::sp_counted_impl_p<CBuffer>
+0000000000026100 V typeinfo name for boost::exception
+000000000002db98 V vtable for CTCPServer
+000000000002da40 V vtable for CStunServer
+000000000002d890 V vtable for boost::wrapexcept<boost::property_tree::json_parser::json_parser_error>
+000000000002d908 V vtable for boost::wrapexcept<boost::property_tree::ptree_bad_path>
+000000000002d868 V vtable for boost::property_tree::json_parser::json_parser_error
+000000000002d7c8 V vtable for boost::property_tree::ptree_error
+000000000002d7f0 V vtable for boost::property_tree::ptree_bad_data
+000000000002d818 V vtable for boost::property_tree::ptree_bad_path
+000000000002d840 V vtable for boost::property_tree::file_parser_error
+000000000002d798 V vtable for boost::exception_detail::clone_base
+000000000002d980 V vtable for boost::any::holder<boost::property_tree::string_path<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, boost::property_tree::id_translator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >
+000000000002da98 V vtable for boost::detail::sp_counted_impl_p<RateLimiter>
+000000000002daf8 V vtable for boost::detail::sp_counted_impl_p<CBuffer>
+000000000002d778 V vtable for boost::exception
+00000000000242a0 W non-virtual thunk to CTCPServer::AddRef()
+0000000000013580 W non-virtual thunk to CTCPServer::Release()
+000000000001f730 W non-virtual thunk to CStunServer::AddRef()
+0000000000013560 W non-virtual thunk to CStunServer::Release()
+0000000000013dc0 W non-virtual thunk to boost::wrapexcept<boost::property_tree::ptree_bad_path>::~wrapexcept()
+0000000000013b60 W non-virtual thunk to boost::wrapexcept<boost::property_tree::ptree_bad_path>::~wrapexcept()
+0000000000014530 W non-virtual thunk to boost::wrapexcept<boost::property_tree::json_parser::json_parser_error>::~wrapexcept()
+0000000000014270 W non-virtual thunk to boost::wrapexcept<boost::property_tree::json_parser::json_parser_error>::~wrapexcept()
+0000000000013d20 W non-virtual thunk to boost::wrapexcept<boost::property_tree::ptree_bad_path>::~wrapexcept()
+0000000000013ae0 W non-virtual thunk to boost::wrapexcept<boost::property_tree::ptree_bad_path>::~wrapexcept()
+00000000000145f0 W non-virtual thunk to boost::wrapexcept<boost::property_tree::json_parser::json_parser_error>::~wrapexcept()
+0000000000014310 W non-virtual thunk to boost::wrapexcept<boost::property_tree::json_parser::json_parser_error>::~wrapexcept()
+00000000000285f0 u boost::property_tree::json_parser::detail::utf8_utf8_encoding::trail_table(unsigned char) const::table
